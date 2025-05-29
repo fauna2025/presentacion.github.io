@@ -110,9 +110,14 @@ body
     border-collapse: collapse;
 }
 
+
+
+
 .slide-container-grid table *{
     border: thin solid #fff;
 }
+
+
 
 .hero{
     background-image: url(fondo2.png);
@@ -121,21 +126,6 @@ body
     background-repeat: no-repeat;
     background-attachment:fixed;
     position: relative;
-}
-
-
-.slide #comercial{
-    background-color: #fff;
-}
-
-.slide .btn{
-    text-decoration: none;
-    color: #fff;
-    background: #01344a;
-    padding: 1rem;
-    border-radius: .5rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
 }
 
 
@@ -161,9 +151,39 @@ body
     color: #fff;
 }
 
+.img-example-container{
+    perspective: 800px;
+}
+
 .img-example{
             width: 90%;
+            transition: transform 1s ease-in-out;
+            animation: rotarLicencia 3s infinite alternate;
         }
+
+@keyframes rotarLicencia {
+    10%{
+        transform: rotate3d(0, 0, 0, 25deg) translateZ(0) translateY(0) translateX(0);
+    }
+    50%{
+        transform:rotate3d(1, -1, 0, 25deg) translateZ(2rem) translateY(2rem) translateX(1rem);
+    }
+    100%{
+        transform:rotate3d(-1, 1, 0, 25deg) translateZ(2rem) translateY(1rem) translateX(1.5rem);
+    }
+}
+
+
+.btn{
+    text-decoration: none;
+    color: #fff;
+    padding: .7vw;
+    border-radius: .5rem;
+    background-color: #01344a;
+}
+
+
+
 
 .slide-hero-image-container{
     width: 100%;
@@ -230,6 +250,67 @@ span{
 }
 
 
+.btn-arriba{
+    position: fixed;
+    right: .7rem;
+    bottom: .1rem;
+}
+
+.btn-arriba img{
+    width: 7vw;
+}
+
+.slide-container-grid h6{
+    margin: 0;
+}
+
+.slide-container-grid ul,
+.slide-container-grid ol{
+    font-size: 2.4vw;
+    color: black;
+    padding: 0 0 0 1rem;
+}
+
+.slide-container-grid ol img{
+    width: 28vw;
+}
+
+.slide-container-grid ol img[alt="paso3"]{
+    width: 68vw;
+}
+
+.white-page{
+    min-height: 100vh;
+    background-color: #fff;
+    color: black;
+}
+
+.white-page h6,
+.white-page p
+{
+    color: black;
+}
+
+.anchor{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.anchor::after{
+    content: '👇';
+    transform: rotateZ(-90deg);
+    position: absolute;
+    right: -2.3rem;
+    animation: arrow .4s infinite alternate;
+}
+
+@keyframes arrow {
+    100%{
+        right: -4rem;
+    }
+}
+
 
 
 @keyframes typing {
@@ -276,6 +357,8 @@ span{
             width: 90%;
         }
 
+        
+
 .guiaUno {
   z-index: 1;
   transform: translate(-52%, -50%) rotate(-13deg) scale(0.95);
@@ -294,6 +377,19 @@ span{
   opacity: 1;
 }
 
+
+.slide-container-grid ul,
+.slide-container-grid ol{
+    font-size: 1vw;
+}
+
+.slide-container-grid ol img{
+    width: 11vw;
+}
+
+.slide-container-grid ol img[alt="paso3"]{
+    width: 34vw;
+}
 
 
     .hero-subtitle{
