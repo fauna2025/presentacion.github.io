@@ -254,14 +254,25 @@ span{
     position: fixed;
     right: .7rem;
     bottom: .1rem;
+    z-index: 1000;
 }
 
 .btn-arriba img{
-    width: 7vw;
+    width: 70px;
 }
 
 .slide-container-grid h6{
     margin: 0;
+}
+
+.ol-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.slide-container-white{
+    width: 100%;
 }
 
 .slide-container-grid ul,
